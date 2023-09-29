@@ -17,19 +17,19 @@ const salt=bcrypt.genSaltSync(10);
 
 //Creating Secret key for generating web token
 const seceret='ddjkvuk5bdd3jlvsfytighk6jggjkrsg3dfd';
-const corsOptions = {
-    origin: 'https://vercel-frontend-three.vercel.app/', // Allow requests from this specific origin without a trailing slash
-    methods: 'GET,POST,PUT,DELETE', // Specify the allowed HTTP methods
-  };
-  
-  app.use(cors(corsOptions));app.use(express.json());
+app.use(cors(
+    {
+        credentials:true,origin:"https://vercel-frontend-three.vercel.app"
+    }
+    ));
+app.use(express.json());
 app.use(cookieParser())
 app.use('/uploads',express.static(__dirname+'/uploads'))
 mongoose.connect('mongodb+srv://mike:mike123@nodeexpressprojects.cuzmdpd.mongodb.net/my-app?retryWrites=true&w=majority',{
 useNewUrlParser:true,useUnifiedTopology:true})
 
 app.get("/",(req,res)=>{
-    res.send("hello i am mihir");
+    res.send("hello my aewsoem blog");
 })
 
 //Register a new User
