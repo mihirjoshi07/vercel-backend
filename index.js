@@ -19,7 +19,9 @@ const salt=bcrypt.genSaltSync(10);
 const seceret='ddjkvuk5bdd3jlvsfytighk6jggjkrsg3dfd';
 app.use(cors(
     {
-        credentials:true,origin:"https://vercel-frontend-three.vercel.app/"
+        credentials:true,
+        origin:"https://vercel-frontend-three.vercel.app/",
+        methods: ['GET', 'POST']
     }
     ));
 app.use(express.json());
