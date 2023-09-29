@@ -28,6 +28,10 @@ app.use('/uploads',express.static(__dirname+'/uploads'))
 mongoose.connect('mongodb+srv://mike:mike123@nodeexpressprojects.cuzmdpd.mongodb.net/my-app?retryWrites=true&w=majority',{
 useNewUrlParser:true,useUnifiedTopology:true})
 
+app.get("/",(req,res)=>{
+    res.send("hello my aewsoem blog");
+})
+
 //Register a new User
 app.post("/register",async(req,res)=>{
 
