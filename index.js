@@ -29,7 +29,7 @@ mongoose.connect('mongodb+srv://mike:mike123@nodeexpressprojects.cuzmdpd.mongodb
 useNewUrlParser:true,useUnifiedTopology:true})
 
 app.get("/",(req,res)=>{
-    res.send("hello my aewsoem blog");
+    res.send("hello i am mihir");
 })
 
 //Register a new User
