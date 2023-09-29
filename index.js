@@ -72,6 +72,7 @@ app.post('/login',async(req,res)=>{
                 id:userDoc._id,
                 username,
             });
+             res.json({ redirectUrl: 'https://vercel-frontend-three.vercel.app' });
         })
         // res.json();
     }else{
