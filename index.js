@@ -17,13 +17,22 @@ const salt=bcrypt.genSaltSync(10);
 
 //Creating Secret key for generating web token
 const seceret='ddjkvuk5bdd3jlvsfytighk6jggjkrsg3dfd';
+
+
+
+
+
+
 app.use(cors(
     {
-        credentials:true,origin:"https://vercel-frontend-three.vercel.app",  
+        credentials:true,
+        origin:"https://vercel-frontend-three.vercel.app",  
         allowedHeaders: ['Content-Type', 'Authorization'],
         exposedHeaders: ['Set-Cookie'],
     }
     ));
+
+    
 app.use(express.json());
 app.use(cookieParser())
 app.use('/uploads',express.static(__dirname+'/uploads'))
