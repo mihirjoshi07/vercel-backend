@@ -79,7 +79,7 @@ app.post('/login',async(req,res)=>{
         //logged in
         jwt.sign({username,id:userDoc._id},seceret,{ expiresIn: '1h' },(err,token)=>{
             if(err) throw err;
-            res.cookie('token',token).json({
+            res.cookie('token',token,{path:"/"}).json({
                 id:userDoc._id,
                 username,
             });
